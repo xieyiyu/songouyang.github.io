@@ -72,6 +72,7 @@ tag_map:
   Pandas: pandas
   装饰器: decorator
   Shadowsocks: shadowsocks
+  SSH: ssh
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
