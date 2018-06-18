@@ -64,6 +64,7 @@ tag_map:
   Linux: linux
   Docker: docker
   Git: git
+  Hexo: hexo
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
