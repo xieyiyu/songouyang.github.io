@@ -31,7 +31,7 @@ Subscriber(addr='songouyang@live.com', joined='2008-08-08')
 '2008-08-08'
 ```
 
-同时它和元组类型是可交换的，支持所有普通元祖操作。
+同时它和元组类型是可交换的，支持所有普通元组操作。
 
 ```python
 >>> len(sub)
@@ -133,9 +133,7 @@ OrderdDict 内部维护着一个根据键插入顺序排序的双向链表。每
 
 ## defaultdict
 
-defaultdict 是内置字典类的子类，不需要检查 key 是否存在。
-
-defaultdict 可以很好的实现一对多的字典，如下：
+defaultdict 是内置字典类的子类，不需要检查 key 是否存在。defaultdict 可以很好的实现一对多的字典，如下：
 
 ```javascript
 d = {
