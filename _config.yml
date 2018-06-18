@@ -58,7 +58,8 @@ default_category: uncategorized
 category_map:
   编程: programming
   工具: tools
-  算法: algorithm
+  算法: algorithms
+  方案: solutions
 tag_map:
   Python: python
   Anaconda: anaconda
@@ -74,6 +75,7 @@ tag_map:
   Shadowsocks: shadowsocks
   SSH: ssh
   二分搜索: binary-search
+  Shell: shell
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
