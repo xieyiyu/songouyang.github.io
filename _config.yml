@@ -69,6 +69,7 @@ tag_map:
   Latex: latex
   树: tree
   Numpy: numpy
+  Pandas: pandas
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
