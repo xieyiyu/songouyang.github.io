@@ -10,7 +10,7 @@ override: false
 
 # Allow to cache content generation. Introduced in NexT v6.0.0.
 cache:
-  enable: false
+  enable: true
 
 # Redefine custom file paths. Introduced in NexT v6.0.2.
 # If commented, will be used default custom file paths.
