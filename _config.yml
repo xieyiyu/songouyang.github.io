@@ -76,6 +76,7 @@ tag_map:
   SSH: ssh
   二分搜索: binary-search
   Shell: shell
+  JetBrains: jetbrains
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
