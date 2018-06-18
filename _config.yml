@@ -63,6 +63,7 @@ tag_map:
   Anaconda: anaconda
   Linux: linux
   Docker: docker
+  Git: git
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
