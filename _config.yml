@@ -57,8 +57,10 @@ index_generator:
 default_category: uncategorized
 category_map:
   编程: programming
+  工具: tools
 tag_map:
   Python: python
+  Anaconda: anaconda
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
