@@ -73,6 +73,7 @@ tag_map:
   装饰器: decorator
   Shadowsocks: shadowsocks
   SSH: ssh
+  二分搜索: binary-search
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
