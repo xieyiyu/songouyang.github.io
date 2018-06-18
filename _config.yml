@@ -61,6 +61,7 @@ category_map:
 tag_map:
   Python: python
   Anaconda: anaconda
+  Linux: linux
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
