@@ -60,6 +60,7 @@ category_map:
   工具: tools
   算法: algorithms
   方案: solutions
+  数学: math
 tag_map:
   Python: python
   Anaconda: anaconda
@@ -77,6 +78,7 @@ tag_map:
   二分搜索: binary-search
   Shell: shell
   JetBrains: jetbrains
+  Poisson: poisson
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
