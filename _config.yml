@@ -61,6 +61,7 @@ category_map:
   算法: algorithms
   方案: solutions
   数学: math
+  读书: reading
 tag_map:
   Python: python
   Anaconda: anaconda
