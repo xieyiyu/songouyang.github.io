@@ -84,6 +84,7 @@ tag_map:
   抽样: sample
   搜索: search
   堆: stack
+  字符串: string
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
