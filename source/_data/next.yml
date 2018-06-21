@@ -485,10 +485,10 @@ pangu: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
-  count: true
-  lazyload: false
+  enable: true
+  shortname: ouyangsong
+  count: false
+  lazyload: true
 
 # Hypercomments
 #hypercomments_id:
