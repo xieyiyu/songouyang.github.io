@@ -81,6 +81,7 @@ tag_map:
   JetBrains: jetbrains
   Poisson: poisson
   排序: sort
+  抽样: sample
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
