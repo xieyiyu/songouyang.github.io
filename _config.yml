@@ -87,6 +87,7 @@ tag_map:
   字符串: string
   正则表达式: regular-expression
   Samba: samba
+  Aria2: aria2
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
