@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://ouyangsong.netlify.com/* https://www.ouyangsong.com/:splat 301!
