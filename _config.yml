@@ -92,6 +92,7 @@ tag_map:
   Aria2: aria2
   编码: encoding
   cURL: curl
+  Tmux: tmux
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
