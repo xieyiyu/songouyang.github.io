@@ -75,5 +75,5 @@ now scale https://idea.now.sh 1
 
 ## 相关文件
 
-上述的 Dockerfile 和破解程序在 [GitHub](https://github.com/songouyang/IntelliJ-IDEA-License-Server) 上。如果需要在服务器上用 Docker 搭建的话，可以使用该[镜像](https://hub.docker.com/r/ouyangsong/intellij-idea-license-server/)，使用的时候记得指定端口咯。
+上述的 Dockerfile 和破解程序在 [GitLab](https://gitlab.com/ouyangsong/IntelliJ-IDEA-License-Server) 上。如果需要在服务器上用 Docker 搭建的话，可以使用该[镜像](https://hub.docker.com/r/ouyangsong/intellij-idea-license-server/)，使用的时候记得指定端口咯。
 
