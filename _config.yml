@@ -93,6 +93,9 @@ tag_map:
   编码: encoding
   cURL: curl
   Tmux: tmux
+  HTTP: http
+  Gevent: gevent
+  协程: coroutine
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
