@@ -34,3 +34,4 @@ comments: false
 最近 30 天的编程时间分布。
 <figure><embed src="https://wakatime.com/share/@ouyangsong/3f9875b5-e500-4db7-a568-442cd832b0e8.svg"></embed></figure>
 
+<iframe src="https://donate.ouyangsong.com" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe>
