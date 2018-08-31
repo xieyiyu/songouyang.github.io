@@ -2,7 +2,6 @@
 title: 关于
 date: 2018-08-12 21:43:31
 type: "about"
-comments: false
 ---
 
 {% cq %}
