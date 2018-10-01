@@ -167,6 +167,8 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
+  Linkedin: https://www.linkedin.com/in/ouyangsong/ || linkedin-square
+  Telegram: https://t.me/ouyangsong || telegram
 
 social_icons:
   enable: true
