@@ -100,6 +100,8 @@ tag_map:
   比特: bits
   Vim: vim
   Xshell: xshell
+  RPC: rpc
+  Thrift: thrift
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
