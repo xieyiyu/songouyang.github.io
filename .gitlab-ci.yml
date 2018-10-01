@@ -3,6 +3,7 @@ image: node:latest
 cache:
     paths:
         - node_modules/
+        - .firebase/
 
 variables:
     GIT_SUBMODULE_STRATEGY: recursive
