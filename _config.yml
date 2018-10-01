@@ -131,3 +131,22 @@ nofollow:
     - wufan.site
     - www.mysry.com
     - niuyuanyuanna.github.io
+
+neat_enable: true
+neat_html:
+  enable: true
+  logger: false
+  exclude:
+neat_css:
+  enable: true
+  logger: false
+  exclude:
+    - '**/*.min.css'
+neat_js:
+  enable: true
+  logger: false
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
