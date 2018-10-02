@@ -142,6 +142,7 @@ neat_css:
   logger: false
   exclude:
     - '**/*.min.css'
+    - '**/lib/**/*.css'
 neat_js:
   enable: true
   logger: false
@@ -150,3 +151,4 @@ neat_js:
   compress:
   exclude:
     - '**/*.min.js'
+    - '**/lib/**/*.js'
