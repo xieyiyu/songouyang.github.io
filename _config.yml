@@ -102,6 +102,7 @@ tag_map:
   Xshell: xshell
   RPC: rpc
   Thrift: thrift
+  网盘: drive
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
