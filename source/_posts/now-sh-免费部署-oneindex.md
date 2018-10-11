@@ -39,13 +39,19 @@ npm install -g now
 
 ![](https://wx3.sinaimg.cn/large/e2a28cd6ly1fvzmgdul3wj213c0fitb8.jpg)
 
-拉取最新的 oneindex 代码。
+从官方仓库拉取最新的 oneindex 代码。
 
 ```sh
 git clone https://github.com/donwa/oneindex.git
 ```
 
-在 oneindex 文件夹中加入 now.json 文件。
+如果在 win 平台不方便新建 now.json 文件，可以拉取我的这个仓库，省去自己加入 now.json 文件。
+
+```sh
+git clone https://github.com/songouyang/oneindex
+```
+
+使用我的仓库则跳过这一步，否则在 oneindex 文件夹中加入 now.json 文件。
 
 {% codeblock now.json lang:js %}
 {
@@ -56,17 +62,19 @@ git clone https://github.com/donwa/oneindex.git
 }
 {% endcodeblock %}
 
+
 进入 oneindex 文件夹中，开始部署项目。
 
 ![](https://wx2.sinaimg.cn/large/e2a28cd6ly1fvzmnplzv8j21kw1oiqm0.jpg)
 
-上图中可以看到部署的地址为：<https://oneindex-yckkdopvtv.now.sh>。部署完成后，容器默认会隔一段时间重启，为了不让容器重启，执行下面的命令。
+上图中可以看到部署的地址为：<https://oneindex-yckkdopvtv.now.sh>。
+部署完成后，容器默认会隔一段时间重启，为了不让容器重启，执行下面的命令。如果不执行，会发现隔一会又要重新配置 onedrive 了。记得把下面的地址改成自己的 now.sh 的地址。
 
 ```sh
 now scale oneindex-yckkdopvtv.now.sh 1
 ```
 
-为了方便访问，可以把前缀设置一个别名。取一个不重复且方便记忆的即可。这里我使用 oneindex。
+为了方便访问，可以把前缀设置一个别名。取一个不重复且方便记忆的即可。这里我使用 oneindex，每个人取不同的别名。
 
 ```sh
 now alias oneindex-yckkdopvtv.now.sh oneindex
