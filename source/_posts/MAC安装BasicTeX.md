@@ -20,6 +20,12 @@ MacTex 安装包非常大，而且自带了很多图形应用。我更喜欢用�
 brew cask install basictex
 ```
 
+后来发现 mactex 还有 no-gui 版本，所以我目前还是选择 mactex-no-gui，省去安装各种缺少的包。
+
+```sh
+brew cask install mactex-no-gui
+```
+
 安装完还不能直接使用，还需要把 texlive 添加到环境变量中，才能找到相关的命令。
 
 ```sh
