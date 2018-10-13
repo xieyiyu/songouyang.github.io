@@ -23,6 +23,7 @@
     "hexo-server": "^0.3.3"
   },
   "scripts": {
-    "serve": "hexo g && hexo s"
+    "firebase": "hexo clean && hexo g && firebase deploy --only hosting --token $FIREBASE_TOKEN --non-interactive",
+    "serve": "hexo clean && hexo g && hexo s"
   }
 }
