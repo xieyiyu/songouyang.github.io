@@ -62,6 +62,19 @@ git clone https://github.com/songouyang/oneindex
 }
 {% endcodeblock %}
 
+参考这条 [PR](https://github.com/malaohu/oneindex/pull/1/files)，如果需要加入定时刷新缓存的话，可以在容器中加入定时任务。使用我的仓库也可以跳过这一步。
+
+```diff Dockerfile https://github.com/songouyang/oneindex/blob/master/Dockerfile 完整文件
+     && mkdir /run/nginx \
+     && chown -R www-data:www-data cache/ config/ \
+     && mv default.conf /etc/nginx/conf.d \
+-    && mv php.ini /usr/local/etc/php
++    && mv php.ini /usr/local/etc/php \
++    && sed -i '/^$/d' /var/spool/cron/crontabs/root \
++    && echo '*/10 * * * * /usr/local/bin/php /var/www/html/one.php cache:refresh' >> /var/spool/cron/crontabs/root \
++    && echo '0 * * * *  /usr/local/bin/php /var/www/html/one.php token:refresh' >> /var/spool/cron/crontabs/root
+```
+
 
 进入 oneindex 文件夹中，开始部署项目。
 
