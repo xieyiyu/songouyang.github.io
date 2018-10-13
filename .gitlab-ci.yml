@@ -3,14 +3,11 @@ image: node:10
 cache:
     paths:
         - node_modules/
-        - .firebase/
-        - .yarn/
 
 variables:
     GIT_SUBMODULE_STRATEGY: recursive
 
 before_script:
-    - yarn config set cache-folder .yarn
     - yarn global add firebase-tools hexo-cli
     - yarn install
 
