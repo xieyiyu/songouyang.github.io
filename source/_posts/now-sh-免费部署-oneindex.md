@@ -37,7 +37,7 @@ npm install -g now
 
 然后登陆 now 账号，它会提示输入邮箱，并通过邮箱登陆验证即可。
 
-![](https://wx3.sinaimg.cn/large/e2a28cd6ly1fvzmgdul3wj213c0fitb8.jpg)
+![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvzmgdul3wj213c0fitb8.jpg)
 
 从官方仓库拉取最新的 oneindex 代码。
 
@@ -53,32 +53,41 @@ git clone https://github.com/songouyang/oneindex
 
 使用我的仓库则跳过这一步，否则在 oneindex 文件夹中加入 now.json 文件。
 
-{% codeblock now.json lang:js %}
+```js
 {
   "type": "docker",
   "features": {
     "cloud": "v1"
   }
 }
-{% endcodeblock %}
+```
 
 参考这条 [PR](https://github.com/malaohu/oneindex/pull/1/files)，如果需要加入定时刷新缓存的话，可以在容器中加入定时任务。使用我的仓库也可以跳过这一步。
 
-```diff Dockerfile https://github.com/songouyang/oneindex/blob/master/Dockerfile 完整文件
-     && mkdir /run/nginx \
-     && chown -R www-data:www-data cache/ config/ \
-     && mv default.conf /etc/nginx/conf.d \
--    && mv php.ini /usr/local/etc/php
-+    && mv php.ini /usr/local/etc/php \
-+    && sed -i '/^$/d' /var/spool/cron/crontabs/root \
-+    && echo '*/10 * * * * /usr/local/bin/php /var/www/html/one.php cache:refresh' >> /var/spool/cron/crontabs/root \
-+    && echo '0 * * * *  /usr/local/bin/php /var/www/html/one.php token:refresh' >> /var/spool/cron/crontabs/root
-```
+```docker
+FROM php:fpm-alpine
+WORKDIR /var/www/html
+COPY / /var/www/html/
+RUN apk add --no-cache nginx \
+    && mkdir /run/nginx \
+    && chown -R www-data:www-data cache/ config/ \
+    && mv default.conf /etc/nginx/conf.d \
+    && mv php.ini /usr/local/etc/php \
+    && sed -i '/^$/d' /var/spool/cron/crontabs/root \
+    && echo '*/10 * * * * /usr/local/bin/php /var/www/html/one.php cache:refresh' >> /var/spool/cron/crontabs/root \
+    && echo '0 * * * *  /usr/local/bin/php /var/www/html/one.php token:refresh' >> /var/spool/cron/crontabs/root
 
+EXPOSE 80
+# Persistent config file and cache
+VOLUME [ "/var/www/html/config", "/var/www/html/cache" ]
+
+CMD php-fpm & \
+    nginx -g "daemon off;"
+```
 
 进入 oneindex 文件夹中，开始部署项目。
 
-![](https://wx2.sinaimg.cn/large/e2a28cd6ly1fvzmnplzv8j21kw1oiqm0.jpg)
+![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvzmnplzv8j21kw1oiqm0.jpg)
 
 上图中可以看到部署的地址为：<https://oneindex-yckkdopvtv.now.sh>。
 部署完成后，容器默认会隔一段时间重启，为了不让容器重启，执行下面的命令。如果不执行，会发现隔一会又要重新配置 onedrive 了。记得把下面的地址改成自己的 now.sh 的地址。
@@ -99,24 +108,24 @@ now alias oneindex-yckkdopvtv.now.sh oneindex
 
 如果部署没有问题，那么打开上面部署得到的网址就可以看到如下界面。
 
-![](https://wx3.sinaimg.cn/large/e2a28cd6ly1fvznb3na86j21kw0zkdkp.jpg)
+![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvznb3na86j21kw0zkdkp.jpg)
 
 开始配置 onedrive。
 
-![](https://wx2.sinaimg.cn/large/e2a28cd6ly1fvznb80xiaj21kw0zkgrw.jpg)
+![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvznb80xiaj21kw0zkgrw.jpg)
 
 ![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvznbd6o69j21kw0zktgn.jpg)
 
-![](https://wx4.sinaimg.cn/large/e2a28cd6ly1fvznbzm6taj21kw0zkqen.jpg)
+![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvznbzm6taj21kw0zkqen.jpg)
 
-![](https://wx3.sinaimg.cn/large/e2a28cd6ly1fvznc30e3ej21kw0zk7c4.jpg)
+![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvznc30e3ej21kw0zk7c4.jpg)
 
 绑定账号。
 
-![](https://wx2.sinaimg.cn/large/e2a28cd6ly1fvznbgkmqqj21kw0zkgq0.jpg)
+![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvznbgkmqqj21kw0zkgq0.jpg)
 
-![](https://wx4.sinaimg.cn/large/e2a28cd6ly1fvzncc4x8qj21kw0zke84.jpg)
+![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvzncc4x8qj21kw0zke84.jpg)
 
-![](https://wx2.sinaimg.cn/large/e2a28cd6ly1fvznbjolopj21kw0zkjz6.jpg)
+![](https://wx1.sinaimg.cn/large/e2a28cd6ly1fvznbjolopj21kw0zkjz6.jpg)
 
 记得修改默认密码。最后就可以得到 oneindex 的地址：<https://oneindex.now.sh>，管理后台地址就是：<https://oneindex.now.sh/admin/>。

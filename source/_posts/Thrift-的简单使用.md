@@ -89,7 +89,7 @@ thrift --gen py test.thrift
 
 首先定义 IDL，就是接口文件。
 
-{% codeblock example.thrift lang:thrift %}
+```thrift
 namespace py ouyangsong
 namespace js ouyangsong
 
@@ -110,7 +110,7 @@ struct TestRsp {
 service TestThriftService {
     TestRsp cut(1: TestReq req);
 }
-{% endcodeblock %}
+```
 
 然后分别生成 Node 和 Python 代码。
 
@@ -121,7 +121,7 @@ thrift --gen js:node example.thrift
 
 然后实现 Python 接口文件的 service 中的业务代码。
 
-{% codeblock server.py lang:python %}
+```python
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -164,11 +164,11 @@ if __name__ == "__main__":
     print("begin serve")
     server.serve()
     print("end serve")
-{% endcodeblock %}
+```
 
 接下来是构造客户端并请求调用服务端。
 
-{% codeblock client.js lang:js %}
+```js
 #!/usr/bin/env node
 
 var thrift = require('thrift'),
@@ -196,7 +196,7 @@ client.cut(req, function(err, rsp){
     }
     connection.end();
 });
-{% endcodeblock %}
+```
 
 调用服务结果输出。
 
