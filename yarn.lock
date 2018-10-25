@@ -286,7 +286,12 @@ binary-extensions@^1.0.0:
   resolved "https://registry.npmjs.org/binary-extensions/download/binary-extensions-1.12.0.tgz#c2d780f53d45bba8317a8902d4ceeaf3a6385b14"
   integrity sha1-wteA9T1Fu6gxeokC1M7q86Y4WxQ=
 
-bluebird@^3.2.2, bluebird@^3.3.1, bluebird@^3.3.5, bluebird@^3.4.0, bluebird@^3.5.1:
+bluebird@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.npmjs.org/bluebird/download/bluebird-3.3.1.tgz#f97ae1970f41d85177283053e9a120160e66c61d"
+  integrity sha1-+Xrhlw9B2FF3KDBT6aEgFg5mxh0=
+
+bluebird@^3.2.2, bluebird@^3.3.5, bluebird@^3.4.0, bluebird@^3.5.1:
   version "3.5.2"
   resolved "https://registry.npmjs.org/bluebird/download/bluebird-3.5.2.tgz#1be0908e054a751754549c270489c1505d4ab15a"
   integrity sha1-G+CQjgVKdRdUVJwnBInBUF1KsVo=
@@ -881,7 +886,7 @@ ee-first@1.1.1:
   resolved "https://registry.npmjs.org/ee-first/download/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-ejs@^2.3.4, ejs@~2.6.1:
+ejs@2.6.1, ejs@^2.3.4:
   version "2.6.1"
   resolved "https://registry.npmjs.org/ejs/download/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
   integrity sha1-SY7A1JVlWrxvI81hho2SZGQHGqA=
@@ -1392,16 +1397,17 @@ hexo-generator-index@^0.2.0:
     hexo-pagination "0.0.2"
     object-assign "^4.0.1"
 
-"hexo-generator-seo-friendly-sitemap@git+https://gitlab.com/ouyangsong/hexo-generator-seo-friendly-sitemap.git":
-  version "0.0.22-pre"
-  resolved "git+https://gitlab.com/ouyangsong/hexo-generator-seo-friendly-sitemap.git#c649eb47fbba338209985c4123a2405629e61198"
+hexo-generator-seo-friendly-sitemap@0.0.22:
+  version "0.0.22"
+  resolved "https://registry.npmjs.org/hexo-generator-seo-friendly-sitemap/download/hexo-generator-seo-friendly-sitemap-0.0.22.tgz#289680d47eb1a4e82b0d6ff36cd11f3e73eddc5d"
+  integrity sha1-KJaA1H6xpOgrDW/zbNEfPnPt3F0=
   dependencies:
-    bluebird "^3.3.1"
-    ejs "~2.6.1"
-    lodash "^4.5.0"
-    moment "~2.11.2"
+    bluebird "3.3.1"
+    ejs "2.6.1"
+    lodash "4.5.0"
+    moment "2.22.2"
     pretty-data "0.40.0"
-    url-join "^1.1.0"
+    url-join "4.0.0"
 
 hexo-generator-tag@^0.2.0:
   version "0.2.0"
@@ -2066,12 +2072,17 @@ lodash.sortby@^4.7.0:
   resolved "https://registry.npmjs.org/lodash.sortby/download/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
+lodash@4.5.0:
+  version "4.5.0"
+  resolved "https://registry.npmjs.org/lodash/download/lodash-4.5.0.tgz#2284aa06f5b136adbd954b903511b62fc39d1f59"
+  integrity sha1-IoSqBvWxNq29lUuQNRG2L8OdH1k=
+
 lodash@^3.2.0:
   version "3.10.1"
   resolved "https://registry.npmjs.org/lodash/download/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
   integrity sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
 
-lodash@^4.13.1, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.5.0:
+lodash@^4.13.1, lodash@^4.17.5, lodash@^4.2.1:
   version "4.17.11"
   resolved "https://registry.npmjs.org/lodash/download/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha1-s56mIp72B+zYniyN8SU2iRysm40=
@@ -2303,15 +2314,10 @@ moment-timezone@^0.5.14:
   dependencies:
     moment ">= 2.9.0"
 
-"moment@>= 2.9.0", moment@^2.10.6, moment@^2.19.4:
+moment@2.22.2, "moment@>= 2.9.0", moment@^2.10.6, moment@^2.19.4:
   version "2.22.2"
   resolved "https://registry.npmjs.org/moment/download/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
-
-moment@~2.11.2:
-  version "2.11.2"
-  resolved "https://registry.npmjs.org/moment/download/moment-2.11.2.tgz#87968e5f95ac038c2e42ac959c75819cd3f52901"
-  integrity sha1-h5aOX5WsA4wuQqyVnHWBnNP1KQE=
 
 morgan@^1.9.0:
   version "1.9.1"
@@ -3406,10 +3412,10 @@ urix@^0.1.0:
   resolved "https://registry.npmjs.org/urix/download/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
-url-join@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/url-join/download/url-join-1.1.0.tgz#741c6c2f4596c4830d6718460920d0c92202dc78"
-  integrity sha1-dBxsL0WWxIMNZxhGCSDQySIC3Hg=
+url-join@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/url-join/download/url-join-4.0.0.tgz#4d3340e807d3773bda9991f8305acdcc2a665d2a"
+  integrity sha1-TTNA6AfTdzvamZH4MFrNzCpmXSo=
 
 use@^3.1.0:
   version "3.1.1"

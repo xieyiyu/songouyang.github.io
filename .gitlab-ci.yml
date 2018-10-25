@@ -10,6 +10,7 @@ variables:
     GIT_SUBMODULE_STRATEGY: recursive
 
 before_script:
+    - rm -f package-lock.json
     - yarn global add firebase-tools hexo-cli --cache-folder .yarn
     - yarn install --cache-folder .yarn
 
