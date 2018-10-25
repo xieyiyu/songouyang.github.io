@@ -6,7 +6,7 @@
 title: 欧阳松的博客
 subtitle: 终日所思不如须臾所学
 description: 北京邮电大学研究生
-keywords: 个人博客, 互联网, 后台, 算法, 程序员
+keywords: 个人博客, 互联网, 后台, 算法, 程序员, 北邮, @ouyangsong, @欧阳松
 author: 欧阳松
 language: zh-CN
 timezone: Asia/Shanghai
@@ -64,6 +64,7 @@ category_map:
   方案: solutions
   数学: math
   读书: reading
+  练习: practice
 tag_map:
   Python: python
   Anaconda: anaconda
