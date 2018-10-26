@@ -1,6 +1,6 @@
 ---
 title: 动态执行 Python 代码
-comments: false
+comments: true
 mathjax: false
 tags: Python
 categories: 方案
