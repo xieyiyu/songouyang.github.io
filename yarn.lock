@@ -1514,10 +1514,10 @@ hexo-util@^0.6.0, hexo-util@^0.6.3:
     html-entities "^1.2.0"
     striptags "^2.1.1"
 
-hexo@^3.2.0:
-  version "3.7.1"
-  resolved "https://registry.npmjs.org/hexo/download/hexo-3.7.1.tgz#0381874e67891b521b9e3023ef4db85a62337f96"
-  integrity sha1-A4GHTmeJG1IbnjAj7024WmIzf5Y=
+hexo@^3.8.0:
+  version "3.8.0"
+  resolved "http://registry.npm.taobao.org/hexo/download/hexo-3.8.0.tgz#4d05cce558ded5c14dfa1516bbae3971747f9747"
+  integrity sha1-TQXM5Vje1cFN+hUWu645cXR/l0c=
   dependencies:
     abbrev "^1.0.7"
     archy "^1.0.0"
