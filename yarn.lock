@@ -1516,7 +1516,7 @@ hexo-util@^0.6.0, hexo-util@^0.6.3:
 
 hexo@^3.8.0:
   version "3.8.0"
-  resolved "http://registry.npm.taobao.org/hexo/download/hexo-3.8.0.tgz#4d05cce558ded5c14dfa1516bbae3971747f9747"
+  resolved "https://registry.npmjs.org/hexo/download/hexo-3.8.0.tgz#4d05cce558ded5c14dfa1516bbae3971747f9747"
   integrity sha1-TQXM5Vje1cFN+hUWu645cXR/l0c=
   dependencies:
     abbrev "^1.0.7"

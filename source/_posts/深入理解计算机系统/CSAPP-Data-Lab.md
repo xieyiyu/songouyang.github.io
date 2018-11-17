@@ -1,7 +1,7 @@
 ---
 title: CSAPP Data Lab
 comments: true
-mathjax: true
+mathjax: false
 tags: CSAPP
 categories: 练习
 abbrlink: 31296
@@ -163,7 +163,7 @@ int fitsBits(int x, int n) {
 
 ## 第八题 divpwr2
 
-除以 2^n 取整数。主要注意正负号和取整。取整方向要靠近数轴上的 0。
+除以 2^n^ 取整数。主要注意正负号和取整。取整方向要靠近数轴上的 0。
 对于正数直接移位就可以，但是对于负数直接移位是有问题的，那会导致远离 0 的方向。所以需要加上 `x^n -1`，这就满足题目意思了。
 首先得到符号位 `x >> 31`，然后得到 `2^n - 1` 也就是 `~((~0) << n)`。
 
