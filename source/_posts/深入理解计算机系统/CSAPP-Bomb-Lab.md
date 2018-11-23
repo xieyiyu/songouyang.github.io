@@ -20,7 +20,7 @@ date: 2018-11-17 14:22:47
 objdump -d bomb > bomb.asm
 ```
 使用 `GDB` 的时候，加上 `-tui` 参数，并且使用 `layout asm` 命令就可以在调试的时候看到汇编代码。
-![](https://i.imgur.com/4uvikSi.png)
+![](https://res.cloudinary.com/ouyangsong/image/upload/q_auto/1542979182.png)
 
 ## 第一关
 
@@ -72,7 +72,7 @@ Border relations with Canada have never been better.
 
 重新跑一遍测试一下第一关的答案。
 
-![phase_1](https://i.imgur.com/0ZN9259.png)
+![](https://res.cloudinary.com/ouyangsong/image/upload/q_auto/1542979215.png)
 
 可以看到没有进入 `explode_bomb` 函数，那就说明第一关已经通过了。
 这里有个小技巧，如果上面的汇编错乱了，可以通过 `refresh` 命令刷新一下。
@@ -193,7 +193,7 @@ $2 = 140737488348152
 第 13 行中 `eax` 等于 `0x8 + rsp`，第 14 行中跳转到 `*0x402470`，这是 switch 语句，跳转到该处的指令位置。
 每个分支都会有一个值赋值到 `eax` 上，我这里直接断点到最后比较的位置，也就是 33 行。
 
-![phase_3](https://i.imgur.com/UZcWc4t.png)
+![](https://res.cloudinary.com/ouyangsong/image/upload/q_auto/1542979249.png)
 
 也就是要和 707 比较，所以如果第一个参数是 2 的话，那么第二个参数就是 707 了。
 所以这一关的一种答案就是 `2 707`。
@@ -278,7 +278,7 @@ $7 = 7
 ```
 所以如果 `edi` 等于 7 的话，那么就会从 11 行然后跳到 22 行，最后退出。那就重新来测试，把第 1 个参数设置成 7。
 
-![func4](https://i.imgur.com/uMJ7uva.png)
+![](https://res.cloudinary.com/ouyangsong/image/upload/q_auto/1542979286.png)
 
 再回来看 `phase_4` 函数的 19 行，这里比较第 2 个输入参数和 0 的大小，如果不等于 0，就引爆炸弹。那么就确定了第 2 个参数是 0 了。
 所以这一关的答案就是 `7 0` 了。
@@ -767,7 +767,7 @@ $9 = 36
 这里就是二叉树，前 8 个字节保存节点的值，中间 8 个字节是左子节点，然后的 8 个字节是右字节点，最后 8 个字节无用。
 先把这个二叉树画出来，如图所示。
 
-![二叉树](https://i.imgur.com/JDzSbpu.png)
+![](https://res.cloudinary.com/ouyangsong/image/upload/q_auto/1542979329.png)
 
 继续看代码，第 15 行代码的意思就是取右子节点，然后调用 `fun7`，最后返回 `rax + rax + 1`。
 这里又可以解释前面那种情况了，就是取左子节点，然后乘以 2 返回。
@@ -780,13 +780,13 @@ $9 = 36
 因为结果是 2，然后考虑到是递归，所以递归的倒数第一次应该返回 0，倒数第二次返回 2 * 0 + 1，倒数第三次（也就是第一次）返回 2 * 1。
 所以应该是从根节点开来看，应该是先去左子节点，然后去右子节点，然后等于该节点，所以就是 `0x0000000000000016`。
 
-![fun7](https://i.imgur.com/uDufPSG.png)
+![](https://res.cloudinary.com/ouyangsong/image/upload/q_auto/1542979357.png)
 
 上图验证 `fun7` 函数的输出是 2 满足题意。
 
 ## 总结
 
-![answer](https://i.imgur.com/4QoePgB.png)
+![](https://res.cloudinary.com/ouyangsong/image/upload/q_auto/1542979381.png)
 
 感觉比本科学汇编时有趣多了，这种东西真是要实践才能感受。不然真的是云里雾里。在解决问题的同时去搜索相关知识点。在做这个实验的时候，参考了网上别人的解法，但是也发现了有些网上的解法解释的不对的地方。
 

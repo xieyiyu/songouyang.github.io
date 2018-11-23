@@ -3,7 +3,6 @@ image: node:10
 cache:
     paths:
         - node_modules/
-        - .yarn/
         - .firebase/
         - $HOME/.npm/
 
@@ -13,14 +12,15 @@ variables:
 before_script:
     - rm -f package-lock.json
     - sed -i "s/http:\/\/registry.npm.taobao.org/https:\/\/registry.npmjs.org/g" yarn.lock
-    - yarn --cache-folder .yarn
-    # - yarn global add hexo-cli gulp@next --cache-folder .yarn
+    - yarn
 
 pages:
     script:
         - yarn build
     after_script:
-        - npx firebase-tools deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID @ Hash ${CI_COMMIT_SHA:0:7}" --token $FIREBASE_TOKEN --non-interactive
+        - npx firebase-tools deploy --only hosting
+         -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID @ Hash ${CI_COMMIT_SHA:0:7}"
+         --token $FIREBASE_TOKEN --non-interactive
     artifacts:
         paths:
             - public
