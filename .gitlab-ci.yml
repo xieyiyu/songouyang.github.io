@@ -20,7 +20,7 @@ pages:
     script:
         - yarn build
     after_script:
-        - npx firebase deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID @ Hash ${CI_COMMIT_SHA:0:7}" --token $FIREBASE_TOKEN --non-interactive
+        - npx firebase-tools deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID @ Hash ${CI_COMMIT_SHA:0:7}" --token $FIREBASE_TOKEN --non-interactive
     artifacts:
         paths:
             - public
