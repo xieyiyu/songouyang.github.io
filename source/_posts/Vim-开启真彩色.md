@@ -35,7 +35,7 @@ Mosh 的最新版支持真彩色，所以客户端和服务端的 Mosh 都安装
 ### Debian
 
 ```sh
-apt-get install protobuf-compiler libprotobuf-dev libutempter-dev libboost-dev libio-pty-perl libssl-dev pkg-config autoconf
+apt-get install protobuf-compiler libprotobuf-dev libutempter-dev libboost-dev libio-pty-perl libssl-dev pkg-config autoconf libncursesw5-dev
 
 git clone https://github.com/keithw/mosh.git
 cd mosh

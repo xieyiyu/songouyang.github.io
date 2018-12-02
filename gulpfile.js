@@ -94,11 +94,13 @@ gulp.task('html', function html() {
 gulp.task('js', function js() {
     return gulp
         .src([
-            './public/js/src/scrollspy.js',
-            './public/js/src/utils.js',
+            './public/js/src/schemes/pisces.js',
+            './public/js/src/affix.js',
+            './public/js/src/bootstrap.js',
             './public/js/src/motion.js',
             './public/js/src/post-details.js',
-            './public/js/src/bootstrap.js',
+            './public/js/src/scrollspy.js',
+            './public/js/src/utils.js',
             './source/_data/medium-zoom.js'
         ])
         .pipe(concat('bundle.js'))
