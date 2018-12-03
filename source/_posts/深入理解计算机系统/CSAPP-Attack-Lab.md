@@ -14,7 +14,7 @@ date: 2018-12-01 15:56:28
 
 ## 第一关
 
-利用溢出重写 getbuf 函数 ret 的部分，从而调用函数 touch1。
+利用溢出重写 `getbuf` 函数 `ret` 的部分，从而调用函数 `touch1`。
 
 ```c
 void test()
@@ -41,7 +41,7 @@ void touch1()
 objdump ctarget -d > ctarget.d
 ```
 
-然后找到 getbuf 函数的汇编代码。
+然后找到 `getbuf` 函数的汇编代码。
 
 ```x86asm
 00000000004017a8 <getbuf>:
@@ -55,7 +55,7 @@ objdump ctarget -d > ctarget.d
   4017bf:   90                      nop
 ```
 
-可以看到 getbuf 在局部栈中开辟了 `0x28` 个字节的空间，也就是 40 个字节的空间。如果我们的输入超过了 40 个字节，就会造成缓冲区溢出。
+可以看到 `getbuf` 在局部栈中开辟了 `0x28` 个字节的空间，也就是 40 个字节的空间。如果我们的输入超过了 40 个字节，就会造成缓冲区溢出。
 
 ![](https://res.cloudinary.com/ouyangsong/image/upload/q_auto/1543732420.png)
 
@@ -65,13 +65,13 @@ objdump ctarget -d > ctarget.d
 调用者 P 的栈帧自栈底（高地址）到栈顶（低地址）包括了参数以及返回地址。
 {% endnote %}
 
-溢出的字符会直接覆盖调用者栈帧中的返回地址，所以把 touch1 函数的地址作为溢出的字符串，从而覆盖返回地址。
+溢出的字符会直接覆盖调用者栈帧中的返回地址，所以把 `touch1` 函数的地址作为溢出的字符串，从而覆盖返回地址。
 
 ```x86asm
 00000000004017c0 <touch1>:
 ```
 
-接下来需要考虑大小端问题，因为这决定了把 touch1 函数的地址追加在前面还是后面。
+接下来需要考虑大小端问题，因为这决定了把 `touch1` 函数的地址追加在前面还是后面。
 
 看这一行代码，可以推测出这是小端。
 
@@ -166,7 +166,7 @@ ret
 gcc -c 2.s
 objdump -d 2.o > 2.d
 ```
-用 gcc 和 objdump 汇编代码变成机器码。得到如下结果：
+用 `gcc` 和 `objdump` 汇编代码变成机器码。得到如下结果：
 
 ```x86asm
 2.o:     file format elf64-x86-64
@@ -309,7 +309,7 @@ int hexmatch( unsigned val, char *sval )
 }
 ```
 
-这因为 s 的位置是随机的，保存在 getbuf 的数据可能会被 hexmatch 重写。所以放在 getbuf 的栈帧中并不安全，所以需要放到 test 的栈帧中。
+这因为 `s` 的位置是随机的，保存在 `getbuf` 的数据可能会被 `hexmatch` 重写。所以放在 `getbuf` 的栈帧中并不安全，所以需要放到 `test` 的栈帧中。
 
 ![](https://res.cloudinary.com/ouyangsong/image/upload/q_auto/1543736074.png)
 
