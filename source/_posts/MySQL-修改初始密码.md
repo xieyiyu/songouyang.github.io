@@ -47,6 +47,25 @@ mysql>
 ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY '123456';
 ```
 
+如果你用数据库可视化软件链接时，出现下面的报错：
+
+{% note danger %}
+Unable to load authentication plugin 'caching_sha2_password'.
+{% endnote %}
+
+这是因为 MySQL 8.0 使用的新的身份验证机制 `caching_sha2_password`，如果不想用这个，可以用之前的旧的验证方式。
+
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+```
+
+或者修改默认的配置也可以。
+
+```ini
+[mysqld]
+default_authentication_plugin=mysql_native_password
+```
+
 ## 方法二
 
 假如启动 MySQL 时候没有启动了授权表，也就是加上 `skip-grant-tables` 启动参数。
