@@ -10,7 +10,6 @@ variables:
     GIT_SUBMODULE_STRATEGY: recursive
 
 before_script:
-    - rm -f package-lock.json
     - sed -i "s/http:\/\/registry.npm.taobao.org/https:\/\/registry.npmjs.org/g" yarn.lock
     - yarn global add firebase-tools --cache-folder .yarn
     - yarn install --cache-folder .yarn
