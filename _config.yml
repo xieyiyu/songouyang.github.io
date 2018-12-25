@@ -135,3 +135,19 @@ nofollow:
     - wufan.site
     - www.mysry.com
     - niuyuanyuanna.github.io
+
+algolia:
+  applicationID: "YYSU21VUTV"
+  appId: "YYSU21VUTV"
+  apiKey: "2989c644bfc1fb585f712b01193f95db"
+  chunkSize: 5000
+  indexName: "hexo"
+  fields:
+    - content:strip:truncate,0,4000
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
