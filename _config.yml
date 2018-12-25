@@ -105,6 +105,7 @@ tag_map:
   Thrift: thrift
   网盘: drive
   MySQL: mysql
+  KMP: knuth-morris-pratt
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
