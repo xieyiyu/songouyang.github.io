@@ -207,7 +207,7 @@ links_layout: block
 #links_layout: inline
 links:
   #Title: http://example.com
-  Fan Wu: http://wufan.site
+  Fan Wu: https://wufan.site
   NYY: https://niuyuanyuanna.github.io
 
 # Sidebar Avatar
