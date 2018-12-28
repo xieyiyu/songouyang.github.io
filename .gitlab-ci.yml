@@ -1,29 +1,27 @@
 image: node:10
 
 cache:
-    paths:
-        - node_modules/
-        - .yarn/
-        - .firebase/
+  paths:
+    - node_modules/
+    - .yarn/
 
 variables:
-    GIT_SUBMODULE_STRATEGY: recursive
+  GIT_SUBMODULE_STRATEGY: recursive
 
 before_script:
-    - sed -i "s/http:\/\/registry.npm.taobao.org/https:\/\/registry.npmjs.org/g" yarn.lock
-    - yarn global add firebase-tools --cache-folder .yarn
-    - yarn install --cache-folder .yarn
+  - sed -i "s/http:\/\/registry.npm.taobao.org/https:\/\/registry.npmjs.org/g" yarn.lock
+  - yarn global add firebase-tools
+  - yarn install --cache-folder .yarn
 
 pages:
-    script:
-        - yarn index
-        - yarn build
-    after_script:
-        - firebase deploy --only hosting
-         -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID @ Hash ${CI_COMMIT_SHA:0:7}"
-         --token $FIREBASE_TOKEN --non-interactive
-    artifacts:
-        paths:
-            - public
-    only:
-        - master
+  script:
+    - yarn build
+#   after_script:
+#     - firebase deploy --only hosting
+#      -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID @ Hash ${CI_COMMIT_SHA:0:7}"
+#      --token $FIREBASE_TOKEN --non-interactive
+  artifacts:
+    paths:
+      - public
+  only:
+    - source

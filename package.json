@@ -33,9 +33,6 @@
   "scripts": {
     "prebuild": "hexo clean",
     "build": "hexo g",
-    "postbuild": "gulp",
-    "preindex": "hexo clean",
-    "index": "hexo algolia",
-    "postindex": "hexo clean"
+    "postbuild": "gulp"
   }
 }
