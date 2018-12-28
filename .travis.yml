@@ -28,13 +28,6 @@ deploy:
     message: $TRAVIS_COMMIT_MESSAGE
     on:
       branch: source
-  - provider: pages
-    skip_cleanup: true
-    target-branch: master
-    github_token: $GITHUB_TOKEN
-    local_dir: public
-    on:
-      branch: source
 
 after_deploy:
   - hexo clean
