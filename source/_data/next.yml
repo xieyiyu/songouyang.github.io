@@ -177,9 +177,9 @@ site_state: true
 social:
   GitHub: https://github.com/songouyang || github
   E-Mail: mailto:songouyang@live.com || envelope
-  Weibo: https://weibo.com/punderson || weibo
+  #Weibo: https://weibo.com/punderson || weibo
   #Google: https://plus.google.com/yourname || google
-  Twitter: https://twitter.com/songouyang || twitter
+  #Twitter: https://twitter.com/songouyang || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
