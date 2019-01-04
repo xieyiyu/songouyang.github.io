@@ -14,15 +14,15 @@ date: 2018-12-21 14:57:58
 
 Shell 程序其他部分都已经完成了，只需要完善下面几个函数即可。
 
-- void eval(char *cmdline); 解析和运行命令
-- builtin_cmd(char **argv); 识别和解析内置命令
-- void do_bgfg(char **argv); 实现 bg 和 fg 命令
-- void waitfg(pid_t pid); 等待前台程序运行结束
-- void sigchld_handler(int sig); 响应 SIGCHLD
-- void sigtstp_handler(int sig); 响应 SIGINT
-- void sigint_handler(int sig); 响应 SIGTSTP
+- `void eval(char *cmdline);` 解析和运行命令
+- `builtin_cmd(char **argv);` 识别和解析内置命令
+- `void do_bgfg(char **argv);` 实现 bg 和 fg 命令
+- `void waitfg(pid_t pid);` 等待前台程序运行结束
+- `void sigchld_handler(int sig);` 响应 SIGCHLD
+- `void sigtstp_handler(int sig);` 响应 SIGINT
+- `void sigint_handler(int sig);` 响应 SIGTSTP
 
-本实验的教材：[下载地址](https://csapp.cs.cmu.edu/3e/shlab.pdf)
+本实验的教材：[下载地址](https://csapp.cs.cmu.edu/3e/shlab.pdf) 。
 
 ## eval
 
